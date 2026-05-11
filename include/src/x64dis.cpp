@@ -173,7 +173,7 @@ insn_t x64disasm::decode_one(const uint8_t* code, size_t max_len, uint64_t addr)
 
 std::string x64disasm::format_mem(uint8_t mod, uint8_t rm, bool rex_b, int64_t disp, bool has_disp, bool rex_w, bool op66) {
     if (mod == 3) {
-        return reg_name(rm, rex_b, rex_w, op66);  // fixed: use rm not reg
+        return reg_name(rm, rex_b, rex_w, op66);
     }
 
     std::string result = "[";
